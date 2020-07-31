@@ -51,3 +51,4 @@ shape = SubResource( 1 )
 frames = SubResource( 2 )
 animation = "hurt"
 script = ExtResource( 7 )
+[connection signal="animate" from="." to="AnimatedSprite" method="_on_Player_animate"]

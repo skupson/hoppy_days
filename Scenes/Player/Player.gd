@@ -7,6 +7,9 @@ var speed = 750
 var jump_speed = 1500
 var gravity = 75
 
+signal animate
+
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	apply_gravity()
 	animate()
@@ -27,17 +30,8 @@ func movement():
 		motion.x = 0
 	if Input.is_action_pressed("jump") and is_on_floor():
 		motion.y -= jump_speed
-	move_and_slide(motion, Vector2.UP)
+	motion = move_and_slide(motion, Vector2.UP)
 
 func animate():
-	if motion.x != 0:
-		if motion.x > 0:
-			player_sprite.set_flip_h(false)
-		else:
-			player_sprite.set_flip_h(true)
-		player_sprite.play("walk")
-	elif motion.y != 0:
-		player_sprite.play("jump")
-	elif motion.x == 0 and motion.y == 0:
-		player_sprite.play("idle")
+	emit_signal("animate", motion)
 	

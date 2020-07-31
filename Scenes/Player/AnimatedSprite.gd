@@ -1,13 +1,13 @@
 extends AnimatedSprite
 
-func animate():
+func _on_Player_animate(motion):
 	if motion.x != 0:
 		if motion.x > 0:
-			player_sprite.set_flip_h(false)
+			set_flip_h(false)
 		else:
-			player_sprite.set_flip_h(true)
-		player_sprite.play("walk")
+			set_flip_h(true)
+		play("walk")
 	elif motion.y != 0:
-		player_sprite.play("jump")
+		play("jump")
 	elif motion.x == 0 and motion.y == 0:
-		player_sprite.play("idle")
+		play("idle")
