@@ -58,7 +58,7 @@ current = true
 zoom = Vector2( 2, 2 )
 limit_left = 0
 limit_top = 0
-limit_bottom = 2048
+limit_bottom = 3000
 limit_smoothed = true
 smoothing_enabled = true
 
@@ -79,7 +79,6 @@ __meta__ = {
 }
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
-position = Vector2( 0, -500 )
 motion_mirroring = Vector2( 2048, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/ParallaxLayer2"]
@@ -91,7 +90,6 @@ __meta__ = {
 }
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
-scale = Vector2( 1, -500 )
 motion_mirroring = Vector2( 2048, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/ParallaxLayer3"]
@@ -103,7 +101,6 @@ __meta__ = {
 }
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
-position = Vector2( 0, -500 )
 motion_mirroring = Vector2( 2048, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/ParallaxLayer4"]

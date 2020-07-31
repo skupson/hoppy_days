@@ -4,6 +4,7 @@ var motion = Vector2(0, 0)
 var speed = 1250
 var jump_speed = 2000
 var gravity = 100
+var world_limit = 4000
 
 signal animate
 
@@ -12,7 +13,6 @@ func _physics_process(delta):
 	apply_gravity()
 	animate()
 	movement()
-	
 	
 func apply_gravity():
 	if not is_on_floor():
@@ -31,8 +31,13 @@ func movement():
 		motion.x = 0
 	if Input.is_action_pressed("jump") and is_on_floor():
 		motion.y -= jump_speed
+	if position.y > world_limit:
+		end_game()
 	motion = move_and_slide(motion, Vector2.UP)
 
 func animate():
 	emit_signal("animate", motion)
+	
+func end_game():
+	get_tree().change_scene("res://Scenes/Levels/Game End.tscn")
 	
