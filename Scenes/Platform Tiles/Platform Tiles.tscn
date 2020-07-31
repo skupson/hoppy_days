@@ -1,0 +1,95 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/GFX/Environment/ground_sand_small.png" type="Texture" id=1]
+[ext_resource path="res://Assets/GFX/Environment/ground_snow.png" type="Texture" id=2]
+[ext_resource path="res://Assets/GFX/Environment/ground_cake.png" type="Texture" id=3]
+[ext_resource path="res://Assets/GFX/Environment/ground_cake_small.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GFX/Environment/ground_grass_small.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GFX/Environment/ground_grass.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GFX/Environment/ground_sand.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GFX/Environment/ground_snow_small.png" type="Texture" id=8]
+
+[node name="Platform Tiles" type="Node2D"]
+
+[node name="ground_cake" type="Sprite" parent="."]
+position = Vector2( 470.046, 293.221 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ground_cake"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground_cake/StaticBody2D"]
+polygon = PoolVector2Array( -177.756, -46.6543, 175.32, -46.6543, 183.123, -44.2159, 187.025, -40.8022, 189.463, -33.9747, 190.438, -15.4431, 163.129, 32.3491, 157.276, 35.2751, -155.811, 47.467, -162.638, 44.541, -189.46, -13.4924, -189.46, -33.9747, -187.51, -40.3145, -184.096, -43.2405 )
+
+[node name="ground_cake_small" type="Sprite" parent="."]
+position = Vector2( 554.434, 548.143 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ground_cake_small"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground_cake_small/StaticBody2D"]
+polygon = PoolVector2Array( -85.2682, -50.801, 86.0343, -50.1199, 92.8456, -47.3954, 96.2512, -44.6709, 99.9973, -38.8813, 100.678, -17.426, 77.5203, 45.9185, 74.1147, 47.9619, 70.709, 49.6647, -71.9863, 41.1506, -77.4352, 39.4478, -79.8192, 37.745, -99.5717, -17.7665, -99.9123, -37.8597, -96.8473, -44.3303, -92.7605, -47.3954 )
+
+[node name="ground_grass" type="Sprite" parent="."]
+position = Vector2( 607.177, 80.492 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ground_grass"]
+position = Vector2( -0.130737, -0.171387 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground_grass/StaticBody2D"]
+polygon = PoolVector2Array( -177.756, -46.6543, 175.32, -46.6543, 183.123, -44.2159, 187.025, -40.8022, 189.463, -33.9747, 190.438, -15.4431, 163.129, 32.3491, 157.276, 35.2751, -155.811, 47.467, -162.638, 44.541, -189.46, -13.4924, -189.46, -33.9747, -187.51, -40.3145, -184.096, -43.2405 )
+
+[node name="ground_grass_small" type="Sprite" parent="."]
+position = Vector2( 121.945, 245.752 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ground_grass_small"]
+position = Vector2( -122.945, -245.752 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground_grass_small/StaticBody2D"]
+position = Vector2( 121.727, 246.255 )
+polygon = PoolVector2Array( -85.2682, -50.801, 86.0343, -50.1199, 92.8456, -47.3954, 96.2512, -44.6709, 99.9973, -38.8813, 100.678, -17.426, 77.5203, 45.9185, 74.1147, 47.9619, 70.709, 49.6647, -71.9863, 41.1506, -77.4352, 39.4478, -79.8192, 37.745, -99.5717, -17.7665, -99.9123, -37.8597, -96.8473, -44.3303, -92.7605, -47.3954 )
+
+[node name="ground_sand" type="Sprite" parent="."]
+position = Vector2( 213.365, 523.53 )
+texture = ExtResource( 7 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ground_sand"]
+position = Vector2( 393.681, -443.209 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground_sand/StaticBody2D"]
+position = Vector2( -393.579, 443.842 )
+polygon = PoolVector2Array( -177.756, -46.6543, 175.32, -46.6543, 183.123, -44.2159, 187.025, -40.8022, 189.463, -33.9747, 190.438, -15.4431, 163.129, 32.3491, 157.276, 35.2751, -155.811, 47.467, -162.638, 44.541, -189.46, -13.4924, -189.46, -33.9747, -187.51, -40.3145, -184.096, -43.2405 )
+
+[node name="ground_sand_small" type="Sprite" parent="."]
+position = Vector2( 246.769, 113.896 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ground_sand_small"]
+position = Vector2( -121.769, -245.896 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground_sand_small/StaticBody2D"]
+position = Vector2( 121.727, 246.255 )
+polygon = PoolVector2Array( -85.2682, -50.801, 86.0343, -50.1199, 92.8456, -47.3954, 96.2512, -44.6709, 99.9973, -38.8813, 100.678, -17.426, 77.5203, 45.9185, 74.1147, 47.9619, 70.709, 49.6647, -71.9863, 41.1506, -77.4352, 39.4478, -79.8192, 37.745, -99.5717, -17.7665, -99.9123, -37.8597, -96.8473, -44.3303, -92.7605, -47.3954 )
+
+[node name="ground_snow" type="Sprite" parent="."]
+position = Vector2( 742.549, 454.964 )
+texture = ExtResource( 2 )
+
+[node name="taticBody2D2" type="StaticBody2D" parent="ground_snow"]
+position = Vector2( -125.503, -367.644 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground_snow/taticBody2D2"]
+position = Vector2( 124.741, 368.017 )
+polygon = PoolVector2Array( -177.756, -46.6543, 175.32, -46.6543, 183.123, -44.2159, 187.025, -40.8022, 189.463, -33.9747, 190.438, -15.4431, 163.129, 32.3491, 157.276, 35.2751, -155.811, 47.467, -162.638, 44.541, -189.46, -13.4924, -189.46, -33.9747, -187.51, -40.3145, -184.096, -43.2405 )
+
+[node name="ground_snow_small" type="Sprite" parent="."]
+position = Vector2( 877.922, 251.026 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ground_snow_small"]
+position = Vector2( -120.922, -246.026 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground_snow_small/StaticBody2D"]
+position = Vector2( 121.727, 246.255 )
+polygon = PoolVector2Array( -85.2682, -50.801, 86.0343, -50.1199, 92.8456, -47.3954, 96.2512, -44.6709, 99.9973, -38.8813, 100.678, -17.426, 77.5203, 45.9185, 74.1147, 47.9619, 70.709, 49.6647, -71.9863, 41.1506, -77.4352, 39.4478, -79.8192, 37.745, -99.5717, -17.7665, -99.9123, -37.8597, -96.8473, -44.3303, -92.7605, -47.3954 )
