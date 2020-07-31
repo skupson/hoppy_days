@@ -1,11 +1,9 @@
 extends KinematicBody2D
 
-onready var player_sprite = $AnimatedSprite
-
 var motion = Vector2(0, 0)
-var speed = 750
-var jump_speed = 1500
-var gravity = 75
+var speed = 1250
+var jump_speed = 2000
+var gravity = 100
 
 signal animate
 
@@ -15,9 +13,12 @@ func _physics_process(delta):
 	animate()
 	movement()
 	
+	
 func apply_gravity():
 	if not is_on_floor():
 		motion.y += gravity
+	elif is_on_ceiling():
+		motion.y = 1
 	else:
 		motion.y = 0
 

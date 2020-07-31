@@ -6,10 +6,10 @@
 [node name="Level One" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 489.844, -282.408 )
+position = Vector2( 324.012, 1119.95 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( 327692, 3, 0, 393216, 2, 0, 458759, 3, 0 )
+tile_data = PoolIntArray( 655404, 2, 0, 983074, 2, 0, 1245207, 2, 0, 1507331, 2, 0, 1507341, 2, 0, 1572905, 2, 0, 1703958, 2, 0, 1835040, 2, 0 )
