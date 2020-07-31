@@ -8,10 +8,6 @@
 [ext_resource path="res://Assets/GFX/Players/bunny1_hurt.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Player/AnimatedSprite.gd" type="Script" id=7]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 60.595
-height = 112.01
-
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
@@ -35,20 +31,29 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 60.3311, 115.004 )
+
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 497.701, 189.026 )
+collision_mask = 2
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 20.976 )
-scale = Vector2( 1, 0.7 )
-shape = SubResource( 1 )
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "hurt"
 script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 20.976 )
+scale = Vector2( 1, 0.7 )
+shape = SubResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+smoothing_enabled = true
 [connection signal="animate" from="." to="AnimatedSprite" method="_on_Player_animate"]
